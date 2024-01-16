@@ -11,7 +11,7 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
+        <img src={logo} class={styles.logo} alt="logo"/>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -23,9 +23,9 @@ const App: Component = () => {
         >
           Learn Solid
         </a><br />
-        Hello, {name()}
+        {name()? name(): "Your Message Will be displayed here."} <br />
         <br />
-        <input type="text" value={name()} onInput={(e)=>{setName(e.target.value)}}/>
+        <input type="text" value={name()} onInput={(e)=>{setName(e.target.value)}} style="width:80%;height:30px;font-size:24px;text-align:center" />
       </header>
     </div>
   );
